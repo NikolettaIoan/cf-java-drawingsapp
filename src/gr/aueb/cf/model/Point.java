@@ -1,5 +1,7 @@
 package gr.aueb.cf.model;
 
+import java.util.Random;
+
 /**
  * The {@link  Point} class depicts a two-dimensional
  * <i>point</i> with <b>x</b> and  <b>y</b> coordinates that
@@ -12,14 +14,8 @@ package gr.aueb.cf.model;
  * @see <a>href="https://codingfactory.aueb.gr/" </a>
  */
 public class Point {
-    /**
-     * The x-coordinate
-     */
-    private int x;
 
-    /**
-     * The y-coordinate
-     */
+    private int x;
     private int y;
 
     /**
@@ -43,6 +39,26 @@ public class Point {
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    /**
+     * Constructs a new {@link Point}  instance.
+     *
+     * @return  the new default Point instance
+     */
+    public static Point getZeroPoint(){
+        return new Point();
+    }
+
+    /**
+     * Constructs a random point
+     *
+     * @return
+     *      a newly created random point.
+     */
+    public static Point getRandomPoint(){
+        Random r = new Random();
+        return new Point(r.nextInt(201) - 100, r.nextInt(201) - 100);
     }
 
     /**
