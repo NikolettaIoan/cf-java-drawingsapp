@@ -2,7 +2,7 @@ package gr.aueb.cf.model;
 
 /**
  * The {@link SingletonPoint} is an instance-controlled class.
- * IIt constructs only one instance fo the class.
+ * It constructs only one instance for the class.
  * *** The Singleton Design Pattern***
  */
 public class SingletonPoint {
